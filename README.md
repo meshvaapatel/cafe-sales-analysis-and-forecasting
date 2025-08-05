@@ -1,6 +1,6 @@
 # 📊 Cafe Sales EDA – From Raw Data to Actionable Insights
 
-A complete end-to-end EDA project built using Python & Jupyter Notebook to analyze dirty cafe sales data and extract meaningful business insights.
+A complete EDA project built using Python & Jupyter Notebook to analyze dirty cafe sales data and extract meaningful business insights.
 
 --- 
 
@@ -99,3 +99,4 @@ Feel free to connect with me on [LinkedIn](https://linkedin.com/in/meshva-patel-
 
 ### 📌 License  
 This project is open-source and available for educational and portfolio use only.
+
