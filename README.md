@@ -1,4 +1,4 @@
-# 📊 Cafe Sales Analysis – Python EDA + Power BI Dashboard
+# 📊 Cafe Sales Analysis – Python EDA + Power BI
 
 A complete EDA project built using Python & Jupyter Notebook to analyze dirty cafe sales data and extract meaningful business insights.
 
@@ -66,6 +66,7 @@ Ultimately, this project demonstrates how raw transactional data can be transfor
 ### 📦 Deliverables
 
 - 📁 `eda_workflow_process.ipynb` → Full Jupyter Notebook
+- 📊 `Dashboard.png` → Power BI Dashboard Image
 - 📝 `sales_summary_report.md` → Key findings & strategic recommendations
 - 📄 `README.md` → Project documentation (you’re here!)
 
@@ -99,5 +100,6 @@ Feel free to connect with me on [LinkedIn](https://linkedin.com/in/meshva-patel-
 
 ### 📌 License  
 This project is open-source and available for educational and portfolio use only.
+
 
 
