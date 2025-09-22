@@ -79,28 +79,19 @@ Detailed project explanation, insights, and business recommendations:
 
 ---
 
-### 🌟 About Me
+## 🌟 About Me  
+Hi, I’m **Meshva Patel**
 
-Hi! I'm Meshva Patel, an aspiring Data Analyst with a strong passion for turning raw data into clear, actionable insights.
+A **Data Analyst** and **aspiring Data Scientist** with a passion for uncovering stories hidden in data. My journey is all about exploring how data shapes strategy, and each project helps me grow closer to that goal.  
 
-This project marks the beginning of my data career and reflects my ability to work with real-world business data using industry-standard tools like Python and Power BI.
-
-I'm focused not just on building dashboards, but on uncovering strategic insights that drive decisions. Whether it's data cleaning, visualization, or storytelling, I believe in delivering value through data.
-
----
-
-### 📬 Get in Touch
-
-Thanks for checking out my project! I'm actively building my portfolio as a Data Analyst and open to internships, freelance projects, or full-time roles.
-
-If you'd like to collaborate, discuss this project, or offer feedback,
-
-Feel free to connect with me on [LinkedIn](https://linkedin.com/in/meshva-patel-8750b02b7) or explore more of my work on [GitHub](https://github.com/Meshva7), or reach out via email at meshvapatel.ds@gmail.com.
+Feel free to connect with me on [LinkedIn](https://www.linkedin.com/in/meshvaapatel/) or explore more of my work on [GitHub](https://github.com/meshvaapatel/), or reach out via email at meshvapatel.ds@gmail.com.
 
 ---
 
-### 📌 License  
-This project is open-source and available for educational and portfolio use only.
+## 📌 Tags
+
+`#Cafesales` `#EDA` `#DataAnalytics` `#PortfolioProject` `#DashboardDesign ` `#BusinessInsights`
+
 
 
 
