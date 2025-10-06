@@ -62,7 +62,7 @@ The analysis successfully converted raw data into a clear performance summary.
 
 An interactive dashboard was created using **Power BI** to visualize key insights and allow for dynamic exploration of the data. This dashboard provides a high-level overview of sales performance, customer patterns, and product trends.
 
-![Dashboard Screenshot](./reports/Dashboard.png)
+[Dashboard Screenshot](/Dashboard.png)
 
 ---
 
@@ -140,3 +140,4 @@ Feel free to connect with me on [LinkedIn](https://www.linkedin.com/in/meshvaapa
 
 ### 📌 Tags
 `#CafeSales` `#EDA` `#DataAnalytics` `#Python` `#PowerBI` `#Streamlit` `#PortfolioProject` `#DashboardDesign` `#BusinessInsights` `#MachineLearning` `#RandomForest`
+
