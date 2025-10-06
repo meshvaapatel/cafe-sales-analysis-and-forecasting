@@ -1,98 +1,142 @@
-# 📊 Cafe Sales Analysis – Python EDA + Power BI
+# 📊 Cafe Sales Analysis & Forecasting 
 
-A complete EDA project built using Python, Jupyter Notebook, and Power BI to analyze messy café sales data and extract meaningful business insights through visual storytelling.
-
---- 
-
-### 📌 Project Overview 
-
-Exploring the Cafe Sales – Dirty Data dataset using a complete EDA (Exploratory Data Analysis) process. We start by understanding the data and cleaning it to fix missing values, mismatched entries, and inconsistencies. Then, we analyze key metrics using univariate, bivariate, and multivariate analysis. We apply feature engineering, handle outliers, and use column and power transformations to improve data quality. We also perform binning, split complex columns, and build new features to make the data more useful. The goal is to find clear, actionable insights that can help improve café operations and support smart, data-driven decisions.
+An end-to-end data analytics project that transforms raw, messy transactional data into actionable business intelligence. This project encompasses a full Exploratory Data Analysis (EDA) using **Python**, an interactive **Power BI** Dashboard for visualization, and a predictive **Streamlit** web application powered by a machine learning model.
 
 ---
 
-### 🎯 OBJECTIVE
+### 🎯 Project Objective
 
-The primary goal of this project is to perform an in-depth exploratory data analysis (EDA) on the Cafe Sales – Dirty Data dataset to uncover key trends and insights that drive sales and customer engagement.
-This project aims to --
-  * Clean and structure messy sales data to ensure accuracy, consistency, and reliability.
-  * Explore customer behavior, product preferences, and payment trends across different café locations.
-  * Uncover hidden patterns in item popularity, spending behavior, and time-based sales fluctuations.
-  * Translate insights into actionable strategies that can improve product offerings, inventory planning, and marketing campaigns.
-  * Support café businesses in making data-driven decisions to boost operational efficiency and enhance customer satisfaction.
+The primary objective of this project is to perform an in-depth exploratory data analysis on the "Cafe Sales – Dirty Data" dataset to uncover key trends, patterns, and actionable insights that drive sales and customer engagement. By transforming raw transactional data into strategic knowledge, this project aims to empower the café to make smarter, data-driven decisions.
 
-Ultimately, this project demonstrates how raw transactional data can be transformed into strategic knowledge that empowers businesses to thrive in a competitive landscape.
-
----
-
-### 🔍 Key Tasks Performed
-
-1. Data Loading & Overview
-2. Data Cleaning & Preparation
-3. Feature Engineering
-4. Visual Analysis
-5. Business Insights 
-6. Recommendations
+The core goals are to:
+* **Clean and Prepare Data -** Structure and sanitize messy sales data to ensure accuracy, consistency, and reliability for analysis.
+* **Uncover Actionable Insights -** Identify key trends related to customer behavior, product performance, and operational efficiency.
+* **Analyze Key Business Drivers -** Explore customer preferences, payment trends, item popularity, spending behavior, and time-based sales fluctuations.
+* **Develop Strategic Recommendations -** Translate analytical findings into actionable strategies that can improve product offerings, optimize inventory, and enhance marketing campaigns.
+* **Deploy a Predictive Tool -** Build and integrate a machine learning model into a user-friendly application to forecast customer spending.
 
 ---
 
-### 💡 Key Insights
+### 📂 End-to-End Project Structure
 
-📊 Key Performance Indicators
+```bash
+├── data/
+│   ├── raw/
+│   │   └── cafe_sales.csv
+│   └── processed/
+│       └── cafe_sales_cleaned.csv
+├── notebooks/
+│   └── eda_workflow_process.ipynb
+├── reports/
+│   ├── sales_summary_report.md
+│   └── Dashboard.png
+├── src/
+│   └── app.py
+├── models/
+│   └── cafe_sales_model.joblib
+├── README.md
+└── requirements.txt
+```
 
-📈 Sales Performance Overview
+---
 
-👥 Customer Behavior Patterns
+### 💡 Key Insights & Findings
 
-⏱️ Time-Based Insights
+The analysis successfully converted raw data into a clear performance summary.
 
-📦 Product-Level Analysis
+#### Key Performance Indicators (KPIs)
+| Metric | Value |
+| :--- | :--- |
+| **Total Revenue** | $85,094.50 |
+| **Total Transactions** | 9,510 |
+| **Average Basket Size** | 3.03 |
 
-📍 Location-Wise Deep Dive
+#### Product & Customer Insights
+* **Best-Selling Item (by Volume):** Juice (5,695 units sold).
+* **Highest Revenue Item:** Juice ($16,943 in revenue).
+* **Top Customer Payment Method:** Digital Wallet, used in **53%** of transactions.
+
+---
+
+### 📊 Interactive Power BI Dashboard
+
+An interactive dashboard was created using **Power BI** to visualize key insights and allow for dynamic exploration of the data. This dashboard provides a high-level overview of sales performance, customer patterns, and product trends.
+
+![Dashboard Screenshot](./reports/Dashboard.png)
+
+---
+
+### 🧠 About the Predictive Model
+
+A machine learning pipeline was built using Scikit-learn to predict a customer's total spending based on their transaction details.
+
+* **Model: Random Forest Regressor**
+    * A `RandomForestRegressor` with 100 estimators was chosen for this task. This powerful ensemble model builds multiple decision trees and merges them, which helps to prevent overfitting and improve predictive accuracy on complex, tabular data.
+
+* **Preprocessing Pipeline**
+    * A `ColumnTransformer` was used to apply different transformations to different types of features:
+        * **Categorical Features** (`item`, `payment_method`, `location`, `weekday`): Transformed using `OneHotEncoder` to convert them into a numerical format.
+        * **Numerical Features** (`quantity`, `day`, `month`, `is_weekend`): Passed through without modification.
+
+* **Evaluation**
+    * The model's performance was evaluated on a hold-out test set using **Root Mean Squared Error (RMSE)** to measure the average difference between the predicted and actual spending values.
+
+---
+
+### 🚀 Streamlit Forecasting App
+
+An interactive web application was built using **Streamlit** to provide a user-friendly interface for the predictive model.
+
+#### How to Run the App
+1.  Ensure all dependencies are installed (`pip install -r requirements.txt`).
+2.  Run the app from your terminal:
+    ```bash
+    streamlit run app.py
+    ```
+3.  Select the item, quantity, payment method, and other details in the web interface to get an instant prediction of the total spend.
+
+---
+
+### 📈 Future Improvements
+
+To further enhance this project, the following steps could be taken:
+
+* **Hyperparameter Tuning -** Utilize GridSearchCV or RandomizedSearchCV to find the optimal hyperparameters for the RandomForestRegressor model, potentially improving its predictive accuracy.
+* **Cloud Deployment -** Deploy the Streamlit application to a public cloud service (e.g., Streamlit Community Cloud, Heroku, or AWS) to make it accessible to a wider audience.
+* **Automated Model Retraining -** Implement a CI/CD pipeline to automatically retrain and deploy the model as new sales data becomes available, preventing model drift.
+* **Deeper Customer Segmentation: -** Perform a more in-depth customer analysis (e.g., RFM - Recency, Frequency, Monetary) to create targeted marketing campaigns.
+* **Inventory Optimization Model -** Develop a separate time-series forecasting model to predict daily demand for specific items, helping to reduce waste and prevent stockouts.
 
 ---
 
 ### 🛠️ Tools & Libraries Used
 
-| Tool / Library    | Purpose |
-|-------------------|---------|
-| `pandas`          | Data manipulation & analysis |
-| `numpy`           | Numerical computations |
-| `matplotlib`      | Basic plotting |
-| `seaborn`         | Statistical visualizations |
-| `scikit-learn`    | Label encoding, regression for imputing missing data |
-| `Power BI`        | Interactive Dashboard |
-
----
-
-### 📦 Deliverables
-
-- 📁 `eda_workflow_process.ipynb` → Full Jupyter Notebook
-- 📊 `Dashboard.png` → Power BI Dashboard Image
-- 📝 `sales_summary_report.md` → Key findings & strategic recommendations
-- 📄 `README.md` → Project documentation (you’re here!)
+| Tool / Library | Purpose |
+| :--- | :--- |
+| `pandas` / `numpy` | Data manipulation & numerical computations |
+| `matplotlib` / `seaborn` | Data visualization |
+| `scikit-learn` | Machine learning (Pipeline, Model, Preprocessing) |
+| `joblib` | Saving & loading the trained model pipeline |
+| `Power BI` | Interactive Dashboard creation |
+| `Streamlit` | Building the interactive web application |
 
 ---
 
 ### 📄 Summary Report
-Detailed project explanation, insights, and business recommendations:  
-👉 [Click here to read the full Summary Report](./sales_summary_report.md)
+For a detailed explanation of the project, insights, and business recommendations, please read the full summary report.
+👉 **[Click here to read the full Summary Report](./reports/sales_summary_report.md)**
 
 ---
 
-## 🌟 About Me  
+### 🌟 About Me
+
 Hi, I’m **Meshva Patel**
 
-A **Data Analyst** and **aspiring Data Scientist** with a passion for uncovering stories hidden in data. My journey is all about exploring how data shapes strategy, and each project helps me grow closer to that goal.  
+A **Data Analyst** and **aspiring Data Scientist** with a passion for uncovering stories hidden in data. My journey is all about exploring how data shapes strategy, and each project helps me grow closer to that goal.
 
-Feel free to connect with me on [LinkedIn](https://www.linkedin.com/in/meshvaapatel/) or explore more of my work on [GitHub](https://github.com/meshvaapatel/), or reach out via email at meshvapatel.ds@gmail.com.
+Feel free to connect with me on [LinkedIn](https://www.linkedin.com/in/meshvaapatel/) or explore more of my work on [GitHub](https://github.com/meshvaapatel/).
 
 ---
 
-## 📌 Tags
-
-`#Cafesales` `#EDA` `#DataAnalytics` `#PortfolioProject` `#DashboardDesign ` `#BusinessInsights`
-
-
-
-
-
+### 📌 Tags
+`#CafeSales` `#EDA` `#DataAnalytics` `#Python` `#PowerBI` `#Streamlit` `#PortfolioProject` `#DashboardDesign` `#BusinessInsights` `#MachineLearning` `#RandomForest`
