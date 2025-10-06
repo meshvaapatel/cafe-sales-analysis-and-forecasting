@@ -20,22 +20,24 @@ The core goals are to:
 ### 📂 End-to-End Project Structure
 
 ```bash
-├── data/
-│   ├── raw/
-│   │   └── cafe_sales.csv
-│   └── processed/
+├── data/                # Contains all project data
+│   ├── raw/             # Original, immutable data
+│   │   └── cafe_sales_dirty.csv
+│   └── processed/       # Cleaned and feature-engineered data
 │       └── cafe_sales_cleaned.csv
-├── notebooks/
+├── notebooks/           # Jupyter notebooks for analysis and experimentation
 │   └── eda_workflow_process.ipynb
-├── reports/
+├── reports/             # Generated reports, figures, and summaries
 │   ├── sales_summary_report.md
-│   └── Dashboard.png
-├── src/
+│   └── figures/
+│       └── Dashboard.png
+├── src/                 # Source code for the application
 │   └── app.py
-├── models/
+├── models/              # Trained and serialized machine learning models
 │   └── cafe_sales_model.joblib
-├── README.md
-└── requirements.txt
+├── .gitignore           # Specifies files for Git to ignore
+├── README.md            # Project overview and documentation (this file)
+└── requirements.txt     # Project dependencies for installation
 ```
 
 ---
@@ -140,5 +142,6 @@ Feel free to connect with me on [LinkedIn](https://www.linkedin.com/in/meshvaapa
 
 ### 📌 Tags
 `#CafeSales` `#EDA` `#DataAnalytics` `#Python` `#PowerBI` `#Streamlit` `#PortfolioProject` `#DashboardDesign` `#BusinessInsights` `#MachineLearning` `#RandomForest`
+
 
 
