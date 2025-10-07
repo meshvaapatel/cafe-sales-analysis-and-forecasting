@@ -4,7 +4,7 @@ import joblib
 
 # Load the trained model pipeline
 try:
-    model = joblib.load('cafe_sales_model.joblib')
+    model = joblib.load('cafe_sales_model.pkl')
 except FileNotFoundError:
     st.error("Model file not found. Please run model_training.py first to generate the model file.")
     st.stop()
@@ -106,4 +106,5 @@ if st.button('Predict Total Spend', type="primary"):
 # --- Display Prediction ---
 # This part is outside the button's "if" block to keep the result visible
 if 'prediction' in st.session_state and st.session_state.prediction is not None:
+
     st.success(f"Predicted Total Spend: ${st.session_state.prediction:.2f}")
