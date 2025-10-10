@@ -1,4 +1,4 @@
-## 📊 Cafe Sales - Exploratory Data Analysis
+# 📊 Cafe Sales - Exploratory Data Analysis
 
 An end-to-end data analytics project that transforms raw, messy transactional data into actionable business intelligence. This project encompasses a full Exploratory Data Analysis (EDA) using **Python** and an interactive **Power BI** Dashboard for visualization.
 
@@ -8,8 +8,6 @@ An end-to-end data analytics project that transforms raw, messy transactional da
 
 The primary objective of this project is to perform an in-depth exploratory data analysis on the "Cafe Sales – Dirty Data" dataset to uncover key trends, patterns, and actionable insights. By transforming raw transactional data into strategic knowledge, this project aims to empower the café to make smarter, data-driven decisions.
 
-The core goals are to:
-
 - **Clean and Prepare Data** - Structure and sanitize messy sales data to ensure accuracy, consistency, and reliability for analysis.  
 - **Uncover Actionable Insights** - Identify key trends related to customer behavior, product performance, and operational efficiency.  
 - **Analyze Key Business Drivers** - Explore customer preferences, payment trends, item popularity, spending behavior, and time-based sales fluctuations.  
@@ -17,50 +15,17 @@ The core goals are to:
 
 ---
 
-### 📂 Project Structure
-
-```bash
-├── data/                # Contains all project data
-│   ├── raw/             # Original, immutable data
-│   │   └── cafe_sales_dirty.csv
-│   └── processed/       # Cleaned and feature-engineered data
-│       └── cafe_sales_cleaned.csv
-├── notebooks/           # Jupyter notebooks for analysis and experimentation
-│   └── eda_workflow_process.ipynb
-├── reports/             # Generated reports, figures, and summaries
-│   ├── sales_summary_report.md
-│   └── figures/
-│       └── Dashboard.png
-├── src/                 # Source code for the application
-│   └── app.py
-├── models/              # Trained and serialized machine learning models
-│   └── cafe_sales_model.joblib
-├── .gitignore           # Specifies files for Git to ignore
-├── README.md            # Project overview and documentation (this file)
-└── requirements.txt     # Project dependencies for installation
-```
----
 ### 🔄 Workflow Process
 
-The analysis follows a structured process as detailed in the Jupyter Notebook:
+The analysis follows a structured process as detailed in the Jupyter Notebook
 
-1.  **Data Loading & Initial Overview**: The dataset was loaded to understand its structure, shape (15,000 rows, 8 columns), and initial data types.
-2.  **Data Cleaning & Preprocessing**: This phase involved correcting inconsistent values (e.g., "ERROR", "UNKNOWN"), converting data types, and imputing missing data using appropriate methods (mode, mean, median, and linear regression).
-3.  **Outlier Detection & Capping**: Outliers in the `total_spent` column were identified using the Interquartile Range (IQR) method and capped to prevent skewing the analysis.
-4.  **Exploratory Data Analysis (EDA)**: Both univariate and bivariate analyses were conducted to explore data distributions and relationships between variables.
-5.  **Feature Engineering**: New features (`day`, `month`, `is_weekend`) were created from the date column, and categorical variables were encoded for analysis.
-6.  **Data Visualization & Insight Generation**: Findings were visualized to generate actionable business recommendations.
+1.  **Data Loading & Initial Overview** - The dataset was loaded to understand its structure, shape (15,000 rows, 8 columns), and initial data types.
+2.  **Data Cleaning & Preprocessing** - This phase involved correcting inconsistent values (e.g., "ERROR", "UNKNOWN"), converting data types, and imputing missing data using appropriate methods (mode, mean, median, and linear regression).
+3.  **Outlier Detection & Capping** - Outliers in the `total_spent` column were identified using the Interquartile Range (IQR) method and capped to prevent skewing the analysis.
+4.  **Exploratory Data Analysis (EDA)** - Both univariate and bivariate analyses were conducted to explore data distributions and relationships between variables.
+5.  **Feature Engineering** - New features (`day`, `month`, `is_weekend`) were created from the date column, and categorical variables were encoded for analysis.
+6.  **Data Visualization & Insight Generation** - Findings were visualized to generate actionable business recommendations.
    
----
-
-### 🛠️ Tools & Libraries Used
-
-| Tool / Library           | Purpose                                     |
-|--------------------------|-------------------------------------------- |
-| `pandas` / `numpy`       | Data manipulation & numerical computations  |
-| `matplotlib` / `seaborn` | Data visualization                          |
-| `Power BI`               | Interactive Dashboard creation              |
-
 ---
 
 ### 💡 Key Insights & Findings
@@ -109,7 +74,7 @@ An interactive dashboard was created using **Power BI** to visualize key insight
 ### 📄 Summary Report
 
 For a detailed explanation of the project, insights, and business recommendations, please read the full summary report.  
-👉 **[Click here to read the full Summary Report](https://www.google.com/search?q=./reports/sales_summary_report.md)**
+👉 **[Click here to read the full Summary Report](https://github.com/meshvaapatel/cafe-sales-analysis-and-forecasting/blob/main/sales_summary_report.md)**
 
 ---
 
@@ -126,6 +91,7 @@ Feel free to connect with me on [LinkedIn](https://www.linkedin.com/in/meshvaapa
 ## 📌 Tags
 
 `#CafeSales` `#EDA` `#DataAnalytics` `#Python` `#PowerBI` `#PortfolioProject` `#DashboardDesign` `#BusinessInsights`
+
 
 
 
